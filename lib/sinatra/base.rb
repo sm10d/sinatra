@@ -676,6 +676,7 @@ module Sinatra
       def post(path, opts={}, &bk); route 'POST', path, opts, &bk; end
       def delete(path, opts={}, &bk); route 'DELETE', path, opts, &bk; end
       def head(path, opts={}, &bk); route 'HEAD', path, opts, &bk; end
+      def list(path, opts={}, &bk); route 'LIST', path, opts, &bk; end
 
     private
       def route(verb, path, opts={}, &block)
@@ -1018,7 +1019,7 @@ module Sinatra
     delegate :get, :put, :post, :delete, :head, :template, :layout, :before,
              :error, :not_found, :configures, :configure, :set, :set_option,
              :set_options, :enable, :disable, :use, :development?, :test?,
-             :production?, :use_in_file_templates!, :helpers
+             :production?, :use_in_file_templates!, :helpers, :list
   end
 
   def self.new(base=Base, options={}, &block)

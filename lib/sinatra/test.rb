@@ -45,6 +45,7 @@ for more information.
     def head(path, *args, &b) ; make_request('HEAD', path, *args, &b) ; end
     def post(path, *args, &b) ; make_request('POST', path, *args, &b) ; end
     def put(path, *args, &b)  ; make_request('PUT', path, *args, &b) ; end
+    def list(path, *args, &b)  ; make_request('LIST', path, *args, &b) ; end
     def delete(path, *args, &b) ; make_request('DELETE', path, *args, &b) ; end
 
     def follow!
